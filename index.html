@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-ar" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Formosa Destino Accesible</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Page-Level Plugin CSS - Buttons -->
+    <link href="css/plugins/social-buttons/social-buttons.css" rel="stylesheet">
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">		
+    
+    
+</head>
+<body>
+    
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand">Formosa Destino Accesible</a>
+            </div>
+            <!-- /.navbar-header -->
+        </nav>
+        <!-- /.navbar-static-top -->
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                <h3></h3>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        <p>
+                        
+                            <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>GASTRONOMIA</b></button>
+                        </p>
+                        
+                            <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>HOTELES</b></button>
+                        </p>
+                        
+                            <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>CINES</b></button>
+                        </p>
+                        
+                            <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>TRANSPORTES</b></button>
+                        </p>
+                        
+                            <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>NUESTRA PROVINCIA</b></button>
+                        </p>
+                        
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+                </div>
+                <!-- /.col-lg-6 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                             <img width="100%" src="img/portada/portada.png" id="mainImage"/>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+                </div>
+                <!-- /.col-lg-6 -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <audio src="data:audio/mp3,ID3%02%00%00%00%00%..." autoplay>
+    </audio>
+
+
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/sb-admin.js"></script>
+    	
+<script type="text/javascript">
+
+	  $(document).ready(function($) {
+		var audio = document.createElement("audio");
+                    
+ 		$( "#1" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='gastronomia.html';
+ 			}
+ 		});
+  
+ 		$( "#2" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='hoteles.html';
+ 			}
+ 		});
+  
+ 		$( "#3" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='cines.html';
+ 			}
+ 		});
+  
+ 		$( "#4" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='transportes.html';
+ 			}
+ 		});
+  
+ 		$( "#5" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='nuestra_provincia.html';
+ 			}
+ 		});
+                    
+
+        var lista = [];
+
+        $('.panel-body .btn').each(function(i){
+            lista.push(i);
+        });
+
+        console.log(lista);
+
+        var m = 0;
+        $(document).keyup(function(event) {
+			if(event.keyCode == 38){
+				if (m == 1) {
+					return 0;
+				}else {
+					m--;
+					reproducir(m);
+					$('#'+m).focus();
+				}
+         }
+
+			if(event.keyCode == 40){
+				if (m == 5){
+					return 0;
+				}else {
+					m++;
+					reproducir(m);
+                                             $('#'+m).focus();
+				}
+         }
+        });
+
+
+function reproducir(id)
+    {
+                   switch(m) {                        
+                        case 1:
+                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
+                            {
+                                audio.src = "audio/portada/gastronomia.mp3";
+                                $('#mainImage').attr('src', "img/portada/gastronomia.jpg");
+                                audio.play();
+                            }
+                        break;
+                        
+                        case 2:
+                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
+                            {
+                                audio.src = "audio/portada/hoteles.mp3";
+                                $('#mainImage').attr('src', "img/portada/hotel.jpg");
+                                audio.play();
+                            }
+                        break;
+                        
+                        case 3:
+                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
+                            {
+                                audio.src = "audio/portada/cines.mp3";
+                                $('#mainImage').attr('src', "img/portada/cine.png");
+                                audio.play();
+                            }
+                        break;
+                        
+                        case 4:
+                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
+                            {
+                                audio.src = "audio/portada/transportes.mp3";
+                                $('#mainImage').attr('src', "img/portada/transportes.jpg");
+                                audio.play();
+                            }
+                        break;
+                        
+                        case 5:
+                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
+                            {
+                                audio.src = "audio/portada/nuestra_provincia.mp3";
+                                $('#mainImage').attr('src', "img/portada/nuestra_provincia.jpg");
+                                audio.play();
+                            }
+                        break;
+                        
+                }
+    }
+
+});
+
+</script>
+</body>
+
+
+
+</html>

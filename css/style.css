@@ -1,0 +1,105 @@
+  #contenedor div
+  {
+  		
+		/*margin: 5px 5px 0px 5px; 
+		border-color:#000;*/
+		border-radius:15px; 
+		-moz-border-radius:3px; /* Firefox */ 
+		-webkit-border-radius:3px; /* Safari y Chrome */ 
+		text-align: center;
+
+		
+  }
+    
+	.centro
+	{
+		background:#c2d6f1;
+		float: left;	
+		width:79%;
+		height:90%;
+		border-style: solid;
+		border-color:#A9D0F5;
+		border-width:1px;
+		
+	}
+	
+	.derecha
+	{
+		background:#c2d6f1;
+		float:right;
+		width:20%;
+		height:90%;
+		border-style: solid;
+		border-color:#A9D0F5;
+		border-width:1px;
+		overflow: hidden;
+	}
+	
+	.abajo
+	{
+		background:#c2d6f1;
+		float:right;
+		width:100%;
+		height:9%;
+		margin-top: 10px;
+		border-style: solid;
+		border-color:#A9D0F5;
+		border-width:1px;
+
+	}
+	
+	
+	.boton { 
+		margin:10% 10% 10% 10%;	
+		border-top: 1px solid #96d1f8; 
+		background: #003559; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#025b96), to(#003559)); 
+		background: -moz-linear-gradient(top, #025b96, #003559); 
+		padding: 5px 10px; 
+		-webkit-border-radius: 8px; 
+		-moz-border-radius: 8px; 
+		border-radius: 8px; 
+		-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0; 
+		-moz-box-shadow: rgba(0,0,0,1) 0 1px 0; 
+		box-shadow: rgba(0,0,0,1) 0 1px 0; 
+		text-shadow: rgba(0,0,0,.4) 0 1px 0; 
+		color: white; 
+		/*font-size: 14px; */
+		font-family: Georgia, serif; 
+		text-decoration: none; 
+		vertical-align: middle; 
+		width:70%;
+		height:5%;
+	} 
+
+	.boton:hover { border-top-color: #054a78; background: #054a78; color: #cccccc; } 
+	.boton:active { border-top-color: #1b435e; background: #1b435e; }	
+
+	.video
+	{
+		margin:5% 10% 10% 10%;	
+	}
+	
+	.opcion
+	{
+		margin:5% 5% 5% 5%;	
+		border-top: 1px solid #96d1f8; 
+		background: #003559;
+		background: -webkit-gradient(linear, left top, left bottom, from(#025b96), to(#003559)); 
+		background: -moz-linear-gradient(top, #025b96, #003559); 
+		padding: 5px 10px; 
+		-webkit-border-radius: 8px; 
+		-moz-border-radius: 8px; 
+		border-radius: 8px; 
+		-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0; 
+		-moz-box-shadow: rgba(0,0,0,1) 0 1px 0; 
+		box-shadow: rgba(0,0,0,1) 0 1px 0; 
+		text-shadow: rgba(0,0,0,.4) 0 1px 0; 
+		color: white; 
+		/*font-size: 14px; */
+		font-family: Georgia, serif; 
+		text-decoration: none; 
+		vertical-align: middle; 
+		width:70%;
+		height:5%;
+	}

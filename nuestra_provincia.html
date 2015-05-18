@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Buttons -->
+    <link href="css/plugins/social-buttons/social-buttons.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Formosa Destino Accesible</a>
+            </div>
+            <!-- /.navbar-header -->
+        </nav>
+        <!-- /.navbar-static-top -->
+
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+							<h3></h3>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+                <div class="col-lg-6">
+                <div class="panel panel-default">
+							<div class="panel-body">
+                            <p>
+                                <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>HERRADURA</b></button>
+                            </p>
+                            <p>
+                                <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>MISION LAISHI</b></button>
+                            </p>
+                            <p>
+                                <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>COMARCA BERMEJO</b></button>
+                            </p>   
+                            <p>
+                                <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>BAÑADO LA ESTRELLA</b></button>
+                            </p>   
+                            <p>
+                                <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>LAGUNA BLANCA</b></button>
+                            </p>   
+                            <p>
+                                <button type="button" id="6" class="btn btn-outline btn-primary btn-lg btn-block"><b>LAGUNA OCA</b></button>
+                            </p>
+                            <p>
+                                <button type="button" id="7" class="btn btn-outline btn-primary btn-lg btn-block"><b>PILCOMAYO</b></button>
+                            </p>       
+                            <p>
+                                <button type="button" id="8" class="btn btn-outline btn-primary btn-lg btn-block"><b>MENU PRINCIPAL</b></button>
+                            </p>                                                                                                                                                                                            
+                        </div>
+
+                </div>
+                </div>
+                <!-- /.col-lg-6 -->
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                            <video autoplay width="100%" id="video">
+                                <source src="" id="video_provincia">
+                            </video>
+                        <!-- /.panel-body -->
+                    </div>
+
+                </div>
+                <!-- /.col-lg-6 -->	                
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+    <audio src="data:audio/mp3,ID3%02%00%00%00%00%..." autoplay>
+    </audio>
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Buttons -->
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+    <!-- Page-Level Demo Scripts - Buttons - Use for reference -->
+   <script type="text/javascript" >
+	  $(document).ready(function($) {
+		var audio = document.createElement("audio");
+
+		  
+ 		$( "#1" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/herradura.mp4");
+ 			$("#video").load(); 			
+ 		});
+  
+ 		$( "#2" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/laishi.mp4");
+ 			$("#video").load(); 	
+ 		});
+  
+ 		$( "#3" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/comarca.mp4");
+ 			$("#video").load(); 	
+ 		});
+  
+ 		$( "#4" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/estrella.mp4");
+ 			$("#video").load(); 	
+ 		});
+  
+ 		$( "#5" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/laguna_blanca.mp4");
+ 			$("#video").load(); 	
+ 		}); 
+
+ 		$( "#6" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/laguna_oca.mp4");
+ 			$("#video").load(); 	
+ 		}); 
+ 		
+ 		$( "#7" ).click(function( event ) {
+ 			$("#video").find("#video_provincia").attr("src", "video/nuestra_provincia/pilcomayo.mp4");
+ 			$("#video").load(); 	
+ 		}); 
+ 		
+
+ 		$( "#8" ).click(function( event ) {
+ 		 	audio.src = "audio/portada/menu_principal.mp3";
+ 			audio.play();
+ 			setTimeout(function(){ window.location = 'index.html'; }, 1000);
+ 		});    
+
+
+        
+        
+
+
+});
+ 
+ 
+ 
+
+
+
+</script>
+</body>
+</html>
