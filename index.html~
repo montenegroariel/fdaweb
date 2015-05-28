@@ -11,7 +11,7 @@
     <!-- Page-Level Plugin CSS - Buttons -->
     <link href="css/plugins/social-buttons/social-buttons.css" rel="stylesheet">
     <!-- SB Admin CSS - Include with every page -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">		
     
     
 </head>
@@ -24,7 +24,6 @@
             </div>
             <!-- /.navbar-header -->
         </nav>
-        <input type="hidden" id="total" value="5">
         <!-- /.navbar-static-top -->
         <div id="page-wrapper">
             <div class="row">
@@ -39,19 +38,21 @@
                         <div class="panel-body">
                         <p>
                         
-                            <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>IL VIALE</b></button>
+                            <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>GASTRONOMIA</b></button>
                         </p>
                         
-                            <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>PIZZA PIZUELA</b></button>
+                            <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>HOTELES</b></button>
                         </p>
                         
-                            <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>RIBERA</b></button>
+                            <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>CINES</b></button>
                         </p>
                         
-                            <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>SANTINO</b></button>
+                            <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>TRANSPORTES</b></button>
                         </p>
-									 <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>MENU PRINCIPAL</b></button>
-                        </p>                        
+                        
+                            <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>NUESTRA PROVINCIA</b></button>
+                        </p>
+                        
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -70,67 +71,55 @@
 
                 </div>
                 <!-- /.col-lg-6 -->
-
         </div>
         <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
-    <audio src="data:audio/mp3,ID3%02%00%00%00%00%..." autoplay>    </audio>
+    <audio src="data:audio/mp3,ID3%02%00%00%00%00%..." autoplay>
+    </audio>
 
-</body>
-    
+
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/sb-admin.js"></script>
-    
-<script type="text/javascript" >
+    	
+<script type="text/javascript">
 
 	  $(document).ready(function($) {
-		 var audio = document.createElement("audio");
-	
-	
+		var audio = document.createElement("audio");
                     
-                		$( "#1" ).keypress(function( event ) {
-                			if ( event.which == 13 ) {
-                                        audio.src = "audio/gastronomia/ilviale_ubicacion.mp3";
-                                        audio.play();
-                			}                		
-                		});
+ 		$( "#1" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='gastronomia.html';
+ 			}
+ 		});
+  
+ 		$( "#2" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='hoteles.html';
+ 			}
+ 		});
+  
+ 		$( "#3" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='cines.html';
+ 			}
+ 		});
+  
+ 		$( "#4" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='transportes.html';
+ 			}
+ 		});
+  
+ 		$( "#5" ).keypress(function( event ) {
+ 			if ( event.which == 13 ) {
+ 				window.location='nuestra_provincia.html';
+ 			}
+ 		});
                     
-                		$( "#2" ).keypress(function( event ) {
-                                    
-                			if ( event.which == 13 ) {
-                                        audio.src = "audio/gastronomia/pizzapizuela_ubicacion.mp3";
-                                        audio.play();
-                			}                			
-                			
-                		});
-                    
-                		$( "#3" ).keypress(function( event ) {
-                                    
-                			if ( event.which == 13 ) {
-                                        audio.src = "audio/gastronomia/ribera_ubicacion.mp3";
-                                        audio.play();
-                			}                			
-                			
-                			
-                		});
-                    
-                		$( "#4" ).keypress(function( event ) {
-                			if ( event.which == 13 ) {
-                                        audio.src = "audio/gastronomia/santino_ubicacion.mp3";
-                                        audio.play();
-                			}                		
-                		});
-                		
-                		$( "#5" ).keypress(function( event ) {
-                			if ( event.which == 13 ) {
-									window.history.back();
-                			}                		
-                		});                		
-                    
+
         var lista = [];
 
         $('.panel-body .btn').each(function(i){
@@ -138,10 +127,9 @@
         });
 
         console.log(lista);
+
         var m = 0;
-
         $(document).keyup(function(event) {
-
 			if(event.keyCode == 38){
 				if (m == 1) {
 					return 0;
@@ -153,12 +141,12 @@
          }
 
 			if(event.keyCode == 40){
-				if (m == $('#total').val()){
+				if (m == 5){
 					return 0;
 				}else {
 					m++;
 					reproducir(m);
-               $('#'+m).focus();
+                                             $('#'+m).focus();
 				}
          }
         });
@@ -166,13 +154,12 @@
 
 function reproducir(id)
     {
-                switch(m) {
-                        
+                   switch(m) {                        
                         case 1:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/gastronomia/ilviale.mp3";
-                                $('#mainImage').attr('src', "img/gastronomia/ilviale.jpg");
+                                audio.src = "audio/portada/gastronomia.mp3";
+                                $('#mainImage').attr('src', "img/portada/gastronomia.jpg");
                                 audio.play();
                             }
                         break;
@@ -180,8 +167,8 @@ function reproducir(id)
                         case 2:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/gastronomia/pizzapizuela.mp3";
-                                $('#mainImage').attr('src', "img/gastronomia/pizzapizuela.jpg");
+                                audio.src = "audio/portada/hoteles.mp3";
+                                $('#mainImage').attr('src', "img/portada/hotel.jpg");
                                 audio.play();
                             }
                         break;
@@ -189,8 +176,8 @@ function reproducir(id)
                         case 3:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/gastronomia/ribera.mp3";
-                                $('#mainImage').attr('src', "img/gastronomia/ribera.jpg");
+                                audio.src = "audio/portada/cines.mp3";
+                                $('#mainImage').attr('src', "img/portada/cine.png");
                                 audio.play();
                             }
                         break;
@@ -198,32 +185,28 @@ function reproducir(id)
                         case 4:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/gastronomia/santino.mp3";
-                                $('#mainImage').attr('src', "img/gastronomia/santino.jpg");
+                                audio.src = "audio/portada/transportes.mp3";
+                                $('#mainImage').attr('src', "img/portada/transportes.jpg");
                                 audio.play();
                             }
                         break;
-
+                        
                         case 5:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/portada/menu_principal.mp3";
-                                $('#mainImage').attr('src', "img/portada/portada.png");
+                                audio.src = "audio/portada/nuestra_provincia.mp3";
+                                $('#mainImage').attr('src', "img/portada/nuestra_provincia.jpg");
                                 audio.play();
                             }
                         break;
+                        
                 }
     }
 
 });
 
-
-
-
-
-
 </script>
-
+</body>
 
 
 

@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -41,35 +41,29 @@
                 <!-- /.col-lg-12 -->
             </div>
 
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
+                <div class="col-lg-6">
+                <div class="panel panel-default">
+							<div class="panel-body">
                             <p>
-                                <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>ASTERION</b></button>
+                                <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>AEROPUERTO</b></button>
                             </p>
                             <p>
-                                <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>CASA GRANDE</b></button>
+                                <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>TERMINAL DE OMNIBUS</b></button>
                             </p>
                             <p>
-                                <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>HOTEL PLAZA</b></button>
-                            </p>
-                            <p>
-                                <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>HOTEL REGINA</b></button>
-                            </p>
-                            <p>
-                                <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>MENU PRINCIPAL</b></button>
-                            </p>                                                                                                                                                     
+                                <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>MENU PRINCIPAL</b></button>
+                            </p>                                                                                                                                                
                         </div>
 
                 </div>
                 </div>
                 <!-- /.col-lg-6 -->
 
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                             <img width="70%" src="img/portada/hotel.jpg" id="mainImage"/>
+                             <img width="80%" src="img/portada/transportes.jpg" id="mainImage"/>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -97,7 +91,7 @@
     <!-- SB Admin Scripts - Include with every page -->
     <script src="js/sb-admin.js"></script>
     <!-- Page-Level Demo Scripts - Buttons - Use for reference -->
-  <script type="text/javascript" >
+   <script type="text/javascript" >
 
 	  $(document).ready(function($) {
 		 var audio = document.createElement("audio");
@@ -106,7 +100,7 @@
                     
                 		$( "#1" ).keypress(function( event ) {
                 			if ( event.which == 13 ) {
-                                        audio.src = "audio/hoteles/asterion_ubicacion.mp3";
+                                        audio.src = "audio/transportes/aeropuerto_ubicacion.mp3";
                                         audio.play();
                 			}                		
                 		});
@@ -114,7 +108,7 @@
                 		$( "#2" ).keypress(function( event ) {
                                     
                 			if ( event.which == 13 ) {
-                                        audio.src = "audio/hoteles/casagrande_ubicacion.mp3";
+                                        audio.src = "audio/transportes/terminal_ubicacion.mp3";
                                         audio.play();
                 			}                			
                 			
@@ -123,25 +117,13 @@
                 		$( "#3" ).keypress(function( event ) {
                                     
                 			if ( event.which == 13 ) {
-                                        audio.src = "audio/hoteles/plaza_ubicacion.mp3";
-                                        audio.play();
+									window.history.back();
                 			}                			
                 			
                 			
                 		});
                     
-                		$( "#4" ).keypress(function( event ) {
-                			if ( event.which == 13 ) {
-                                        audio.src = "audio/hoteles/regina_ubicacion.mp3";
-                                        audio.play();
-                			}                		
-                		});
-                		
-                		$( "#5" ).keypress(function( event ) {
-                			if ( event.which == 13 ) {
-									window.history.back();
-                			}                		
-                		});                		
+                		 		
                     
         var lista = [];
 
@@ -183,8 +165,8 @@ function reproducir(id)
                         case 1:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/hoteles/asterion.mp3";
-                                $('#mainImage').attr('src', "img/hoteles/asterion.jpg");
+                                audio.src = "audio/transportes/aeropuerto.mp3";
+                                $('#mainImage').attr('src', "img/transportes/aeropuerto.jpg");
                                 audio.play();
                             }
                         break;
@@ -192,8 +174,8 @@ function reproducir(id)
                         case 2:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/hoteles/casagrande.mp3";
-                                $('#mainImage').attr('src', "img/hoteles/casagrande.jpg");
+                                audio.src = "audio/transportes/terminal.mp3";
+                                $('#mainImage').attr('src', "img/transportes/terminal.jpg");
                                 audio.play();
                             }
                         break;
@@ -201,29 +183,13 @@ function reproducir(id)
                         case 3:
                         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
                             {
-                                audio.src = "audio/hoteles/plaza.mp3";
-                                $('#mainImage').attr('src', "img/hoteles/plaza.jpg");
-                                audio.play();
-                            }
-                        break;
-                        
-                        case 4:
-                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
-                            {
-                                audio.src = "audio/hoteles/regina.mp3";
-                                $('#mainImage').attr('src', "img/hoteles/regina.jpg");
-                                audio.play();
-                            }
-                        break;
-
-                        case 5:
-                        if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
-                            {
                                 audio.src = "audio/portada/menu_principal.mp3";
                                 $('#mainImage').attr('src', "img/portada/portada.png");
                                 audio.play();
                             }
                         break;
+                        
+
                 }
     }
 
