@@ -35,35 +35,27 @@
             </div>
 
                 <div class="col-lg-4">
-                <div class="panel panel-default">
-							<div class="panel-body">
-                            <p>
-                                <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>HERRADURA</b></button>
-                            </p>
-                            <p>
-                                <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>MISION LAISHI</b></button>
-                            </p>
-                            <p>
-                                <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>COMARCA BERMEJO</b></button>
-                            </p>   
-                            <p>
-                                <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>BAÑADO LA ESTRELLA</b></button>
-                            </p>   
-                            <p>
-                                <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>LAGUNA BLANCA</b></button>
-                            </p>   
-                            <p>
-                                <button type="button" id="6" class="btn btn-outline btn-primary btn-lg btn-block"><b>LAGUNA OCA</b></button>
-                            </p>
-                            <p>
-                                <button type="button" id="7" class="btn btn-outline btn-primary btn-lg btn-block"><b>PILCOMAYO</b></button>
-                            </p>       
-                            <p>
-                                <button type="button" id="8" class="btn btn-outline btn-primary btn-lg btn-block"><b>MENU PRINCIPAL</b></button>
-                            </p>                                                                                                                                                                                            
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        <p>
+                        
+                            <button type="button" id="1" class="btn btn-outline btn-primary btn-lg btn-block"><b>IL VIALE</b></button>
+                        </p>
+                        
+                            <button type="button" id="2" class="btn btn-outline btn-primary btn-lg btn-block"><b>PIZZA PIZUELA</b></button>
+                        </p>
+                        
+                            <button type="button" id="3" class="btn btn-outline btn-primary btn-lg btn-block"><b>RIBERA</b></button>
+                        </p>
+                        
+                            <button type="button" id="4" class="btn btn-outline btn-primary btn-lg btn-block"><b>SANTINO</b></button>
+                        </p>
+									 <button type="button" id="5" class="btn btn-outline btn-primary btn-lg btn-block"><b>MENU PRINCIPAL</b></button>
+                        </p>                        
                         </div>
+                        <!-- /.panel-body -->
+                    </div>
 
-                </div>
                 </div>
                 <!-- /.col-lg-6 -->
 
