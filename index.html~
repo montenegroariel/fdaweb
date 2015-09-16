@@ -33,7 +33,7 @@
                 <!-- /.col-lg-12 -->
             </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <div class="panel panel-default">
                         <div class="panel-body">
                         <p>
@@ -59,8 +59,8 @@
 
                 </div>
                 <!-- /.col-lg-6 -->
-
-                <div class="col-lg-4">
+<img width="100%" src="img/portada/portada.png" id="mainImage"/>
+                <div class="col-lg-2">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->
                         <div class="panel-body">
